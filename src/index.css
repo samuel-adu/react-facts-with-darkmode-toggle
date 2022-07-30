@@ -1,13 +1,145 @@
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* NAV styles */
+
+header {
+  background-color: #f5f5f5;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+header.dark {
+  background-color: #21222a;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+.nav__logo-icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav__logo-text {
+  color: #61dafb;
+  margin-right: auto;
+}
+
+.nav__title {
+  color: #deebf8;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler__text {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2b283a;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+header.dark .slider {
+  border-color: white;
+  background-color: #f5f5f5;
+  justify-content: flex-end;
+}
+
+.slider__circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+header.dark .slider__circle {
+  background-color: black;
+}
+
+.toggler__text--light {
+  color: #2b283a;
+}
+
+header.dark .toggler__text--light {
+  color: #918e9b;
+}
+
+.toggler__text--dark {
+  color: #d5d4d8;
+}
+
+header.dark .toggler__text--dark {
+  color: #ffffff;
+}
+
+/* MAIN styles */
+main {
+  background-image: url("./images/react-icon-light.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: white;
+  color: #2b283a;
+  height: calc(100vh - 90px);
+  padding-top: 4.5em;
+}
+
+main.dark {
+  background-image: url("./images/react-icon-dark.png");
+  background-color: #282d35;
+  color: white;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5em;
+}
+
+.facts-list {
+  max-width: 400px;
+  padding-inline-start: 3em;
+}
+
+.facts-list > li {
+  line-height: 1.6;
+  margin-bottom: 0.5em;
+}
+
+.facts-list > li::marker {
+  font-size: 1.4rem;
+  color: #61dafb;
 }
